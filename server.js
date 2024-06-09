@@ -11,6 +11,10 @@ app.get(':name', (req, res) => {
     res.send(`Hello, ${req.params.name}!`);
 });
 
+app.get('/json', (req, res) => {
+    res.json({ message: 'Hello, World!' });
+});
+
 app.listen(port, () => {
     console.log(`Server listening at http://localhost:${port}`);
 });
